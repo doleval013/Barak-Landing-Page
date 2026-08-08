@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>המלצות - ברק אלוני סדנאות כלבנות והעצמה</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <main class="recommendations-content">
+      <section class="recommendations-header">
+        <h1>המלצות</h1>
+        <p>כאן תמצאו המלצות ממוסדות חינוך שעבדו עם התוכנית שלנו.</p>
+      </section>
+
+      <section class="recommendation-list">
+        <details class="recommendation-card">
+          <summary>מרכז חינוך טכנולוגי אבן רושד</summary>
+          <div class="recommendation-card-body">
+            <img src="/content/recommendations/pics/%D7%90%D7%91%D7%9F%20%D7%A8%D7%95%D7%A9%D7%93.png" alt="המלצה מאבן רושד" />
+            <p>"בית הספר זכה בצוות הדרכה מקצועי, מיומן ואחראי. באמצעות התכנית התלמידים רכשו מיומנויות רגשיות וחברתיות רבות." - באסם אבו אלהיג'א, מנהל בית הספר.</p>
+          </div>
+        </details>
+
+        <details class="recommendation-card">
+          <summary>ויצו נהלל</summary>
+          <div class="recommendation-card-body">
+            <img src="/content/recommendations/pics/%D7%95%D7%99%D7%A6%D7%95%20%D7%A0%D7%94%D7%9C%D7%9C.png" alt="המלצה מויצו נהלל" />
+            <p>"השתתפות בשיעור גורמת לתלמידים להתרוממות רוח, חיזוק הביטחון העצמי והיכולת להיות משמעותי לאחר." - חגית ברוך, מנהלת חטיבת הנעורים.</p>
+          </div>
+        </details>
+
+        <details class="recommendation-card">
+          <summary>חטיבת הביניים כדורי</summary>
+          <div class="recommendation-card-body">
+            <img src="/content/recommendations/pics/%D7%9B%D7%93%D7%95%D7%A8%D7%99.png" alt="המלצה מחטיבת הביניים כדורי" />
+            <p>"התוכנית מאוד מבוקשת על ידי התלמידים והצוות והיא מתבצעת מאז ברצף ולשביעות רצון הצוות והתלמידים." - משה תורג'מן, מנהל חט"ב כדורי.</p>
+          </div>
+        </details>
+
+        <details class="recommendation-card">
+          <summary>הרב תחומי עמק רחוד</summary>
+          <div class="recommendation-card-body">
+            <img src="/content/recommendations/pics/%D7%94%D7%A8%D7%91%20%D7%AA%D7%97%D7%95%D7%9E%D7%99%20%D7%A2%D7%9E%D7%A7%20%D7%A8%D7%97%D7%95%D7%93.png" alt="המלצה מהרב תחומי עמק רחוד" />
+            <p>מכתב המלצה נוסף עם פירוט על עבודת התוכנית במסגרת המוסד.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section contact" id="contact">
+        <h2>רוצים לשמוע עוד?</h2>
+        <p>צרו קשר עכשיו כדי לבדוק את התאמת התוכנית למוסד שלכם.</p>
+        <a class="button button-primary" href="/">חזרה לדף הבית</a>
+      </section>
+    </main>
+  </div>
+
+  <div class="image-overlay" id="imageOverlay" aria-hidden="true">
+    <button class="overlay-close" id="overlayClose" aria-label="סגור תמונה">×</button>
+    <img id="overlayImage" src="" alt="" />
+  </div>
+
+  <script>
+    const overlay = document.getElementById('imageOverlay');
+    const overlayImg = document.getElementById('overlayImage');
+    const closeButton = document.getElementById('overlayClose');
+
+    document.querySelectorAll('.recommendation-card-body img').forEach((img) => {
+      img.addEventListener('click', () => {
+        overlayImg.src = img.src;
+        overlayImg.alt = img.alt || 'תמונה מוגדלת';
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    const closeOverlay = () => {
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden', 'true');
+      overlayImg.src = '';
+    };
+
+    closeButton.addEventListener('click', closeOverlay);
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) {
+        closeOverlay();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && overlay.classList.contains('open')) {
+        closeOverlay();
+      }
+    });
+  </script>
+</body>
+</html>

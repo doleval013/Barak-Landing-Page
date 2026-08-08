@@ -1,0 +1,16 @@
+{
+  "name": "barak-landing-page",
+  "version": "1.0.0",
+  "description": "Minimal Hebrew landing page for dogs.barakaloni.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "npx playwright test"
+  },
+  "dependencies": {
+    "express": "^4.18.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0"
+  }
+}
