@@ -260,6 +260,20 @@ a.button {
   content: '-';
 }
 
+.recommendation-card summary strong {
+  display: block;
+  font-size: 1.02rem;
+  color: var(--accent-dark);
+  margin-bottom: 0.4rem;
+}
+
+.rec-summary-text {
+  display: block;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
 .recommendation-card-body {
   padding: 0 1.6rem 1.6rem;
   display: grid;
