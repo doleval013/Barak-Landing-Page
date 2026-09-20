@@ -31,7 +31,7 @@ for (const viewport of [mobileView, desktopView]) {
     test('hero CTA button is visible', async ({ page }) => {
       const heroButton = page.locator('#hero a.button-primary');
       await expect(heroButton).toBeVisible();
-      await expect(heroButton).toHaveText('לבדיקת התאמה למוסד');
+      await expect(heroButton).toHaveText('יצירת קשר');
     });
 
     test('page uses white-blue palette and correct heading text', async ({ page }) => {

@@ -46,6 +46,76 @@ a.button {
   cursor: pointer;
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  min-height: 3.1rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1.15rem;
+  line-height: 1;
+  box-shadow: 0 10px 24px rgba(15, 33, 64, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(15, 33, 64, 0.12);
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  display: block;
+}
+
+.contact-link.mail,
+.contact-link.phone {
+  background: rgba(43, 101, 209, 0.08);
+  color: var(--accent-dark);
+}
+
+.contact-link.whatsapp {
+  background: #26d367;
+  color: white;
+}
+
+.contact {
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.contact h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+}
+
+.contact p {
+  max-width: 980px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.15rem;
+}
+
 .button-primary {
   background: var(--accent);
   color: white;
