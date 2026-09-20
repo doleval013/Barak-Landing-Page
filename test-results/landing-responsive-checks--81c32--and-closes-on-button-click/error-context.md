@@ -67,7 +67,7 @@ Call log:
   31 |     test('hero CTA button is visible', async ({ page }) => {
   32 |       const heroButton = page.locator('#hero a.button-primary');
   33 |       await expect(heroButton).toBeVisible();
-  34 |       await expect(heroButton).toHaveText('לבדיקת התאמה למוסד');
+  34 |       await expect(heroButton).toHaveText('יצירת קשר');
   35 |     });
   36 | 
   37 |     test('page uses white-blue palette and correct heading text', async ({ page }) => {
